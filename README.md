@@ -1,5 +1,4 @@
 # Module 2: Audio
-submitted by Nic Gill
 
 On startup a 2D sound will start playing.
 ### Key Commands
