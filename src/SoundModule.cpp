@@ -61,6 +61,11 @@ void SoundModule::set_sound_engine(irrklang::ISoundEngine* isound_engine) {
 	this->isound_engine = isound_engine;
 }
 
+// Gets the engine
+irrklang::ISoundEngine* SoundModule::get_sound_engine() {
+	return this->isound_engine;
+}
+
 // Vector conversion
 irrklang::vec3df SoundModule::to_vec3df(Vector position) {
 	return irrklang::vec3df(position.x, position.y, position.z);

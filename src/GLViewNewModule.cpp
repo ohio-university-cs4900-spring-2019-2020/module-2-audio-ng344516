@@ -97,6 +97,14 @@ void GLViewNewModule::updateWorld()
    GLView::updateWorld(); //Just call the parent's update world first.
                           //If you want to add additional functionality, do it after
                           //this call.
+   if (!this->gameSounds->get_sound_3D().empty()) {
+	   this->gameSounds->get_sound_engine()->setListenerPosition(
+		   this->gameSounds->to_vec3df(this->cam->getPosition()),
+		   this->gameSounds->to_vec3df(this->cam->getLookDirection()),
+		   irrklang::vec3df(0, 0, 0),
+		   this->gameSounds->to_vec3df(this->cam->getNormalDirection())
+	   );
+   }
 }
 
 

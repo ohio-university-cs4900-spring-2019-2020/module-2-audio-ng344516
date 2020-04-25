@@ -14,6 +14,7 @@ namespace Aftr {
 			std::vector<irrklang::ISound*> get_sound_2D();
 			std::vector<irrklang::ISound*> get_sound_3D();
 			void SoundModule::set_sound_engine(irrklang::ISoundEngine* isound_engine);
+			irrklang::ISoundEngine* get_sound_engine();
 			irrklang::vec3df to_vec3df(Vector position);
 		protected:
 			irrklang::ISoundEngine * isound_engine = nullptr;
